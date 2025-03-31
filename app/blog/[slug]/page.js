@@ -20,50 +20,6 @@ const BlogPost = async ({ params }) => {
 
   return (
     <>
-      <Head>
-        {/* SEO Meta Tags */}
-        <title>{post.title} - The Devoted Guru</title>
-        <meta name="description" content={post.excerpt || "This is a blog about how to improve your life."} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt || "This is a blog post about how to improve your life."} />
-        <meta property="og:image" content={post.image} />
-        <meta property="og:image:alt" content={`Image for ${post.title}`} />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="article" />
-        <link rel="canonical" href={`https://www.devotedguru.com/blog/${post.slug}`} />
-
-        {/* Structured Data (Schema.org Article) */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BlogPosting",
-              headline: post.title,
-              description: post.excerpt || "",
-              image: post.image,
-              datePublished: post.date,
-              author: {
-                "@type": "Person",
-                name: "Author Name", // Replace with actual author name
-              },
-              mainEntityOfPage: {
-                "@type": "WebPage",
-                "@id": `https://www.devotedguru.com/blog/${post.slug}`,
-              },
-            }),
-          }}
-        />
-
-        {/* Twitter Card Metadata */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@DevotedGuru" /> {/* Replace with your Twitter handle */}
-        <meta name="twitter:creator" content="@DevotedGuru" /> {/* Replace with your Twitter handle */}
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.excerpt || "This is a blog post about how to improve your life."} />
-        <meta name="twitter:image" content={post.image} />
-        <meta name="twitter:image:alt" content={`Image for ${post.title}`} />
-      </Head>
       <div className={styles.container}>
         {/* Left Sidebar */}
         <aside className={styles.sidebarLeft}>
@@ -74,6 +30,42 @@ const BlogPost = async ({ params }) => {
         {/* Main Content */}
         <main className={styles.mainContent}>
           <h1>{post.title}</h1>
+          <meta name="description" content={post.excerpt || "This is a blog about how to improve your life."} />
+          <meta property="og:title" content={post.title} />
+          <meta property="og:description" content={post.excerpt || "This is a blog post about how to improve your life."} />
+          <meta property="og:image" content={post.image} />
+          <meta property="og:image:alt" content={`Image for ${post.title}`} />
+          <meta name="robots" content="index, follow" />
+          <meta property="og:type" content="article" />
+          <link rel="canonical" href={`https://www.devotedguru.com/blog/${post.slug}`} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@DevotedGuru" /> {/* Replace with your Twitter handle */}
+          <meta name="twitter:creator" content="@DevotedGuru" /> {/* Replace with your Twitter handle */}
+          <meta name="twitter:title" content={post.title} />
+          <meta name="twitter:description" content={post.excerpt || "This is a blog post about how to improve your life."} />
+          <meta name="twitter:image" content={post.image} />
+          <meta name="twitter:image:alt" content={`Image for ${post.title}`} />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                headline: post.title,
+                description: post.excerpt || "",
+                image: post.image,
+                datePublished: post.date,
+                author: {
+                  "@type": "Person",
+                  name: "Author Name", // Replace with actual author name
+                },
+                mainEntityOfPage: {
+                  "@type": "WebPage",
+                  "@id": `https://www.devotedguru.com/blog/${post.slug}`,
+                },
+              }),
+            }}
+          />
           <Image
             src={post.image}
             alt={post.title}
