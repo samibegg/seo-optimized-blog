@@ -67,8 +67,8 @@ const BlogPost = async ({ params }) => {
       <div className={styles.container}>
         {/* Left Sidebar */}
         <aside className={styles.sidebarLeft}>
-          <h2>Left Sidebar</h2>
-          <p>Links or content for the left sidebar.</p>
+          <h2></h2>
+          <p></p>
         </aside>
 
         {/* Main Content */}
@@ -97,8 +97,8 @@ const BlogPost = async ({ params }) => {
 
         {/* Right Sidebar */}
         <aside className={styles.sidebarRight}>
-          <h2>Right Sidebar</h2>
-          <p>Links or content for the right sidebar.</p>
+          <h2></h2>
+          <p></p>
         </aside>
       </div>
     </>
