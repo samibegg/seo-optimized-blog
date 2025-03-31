@@ -22,15 +22,15 @@ const BlogPost = async ({ params }) => {
     <>
       <Head>
         {/* SEO Meta Tags */}
-        <title>{post.title} - My Blog</title>
-        <meta name="description" content={post.excerpt || "This is a blog post."} />
+        <title>{post.title} - The Devoted Guru</title>
+        <meta name="description" content={post.excerpt || "This is a blog about how to improve your life."} />
         <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt || "This is a blog post."} />
+        <meta property="og:description" content={post.excerpt || "This is a blog post about how to improve your life."} />
         <meta property="og:image" content={post.image} />
         <meta property="og:image:alt" content={`Image for ${post.title}`} />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="article" />
-        <link rel="canonical" href={`https://www.myblog.com/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://www.devotedguru.com/blog/${post.slug}`} />
 
         {/* Structured Data (Schema.org Article) */}
         <script
@@ -49,7 +49,7 @@ const BlogPost = async ({ params }) => {
               },
               mainEntityOfPage: {
                 "@type": "WebPage",
-                "@id": `https://www.myblog.com/blog/${post.slug}`,
+                "@id": `https://www.devotedguru.com/blog/${post.slug}`,
               },
             }),
           }}
@@ -57,10 +57,10 @@ const BlogPost = async ({ params }) => {
 
         {/* Twitter Card Metadata */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@yourTwitterHandle" /> {/* Replace with your Twitter handle */}
-        <meta name="twitter:creator" content="@yourTwitterHandle" /> {/* Replace with your Twitter handle */}
+        <meta name="twitter:site" content="@DevotedGuru" /> {/* Replace with your Twitter handle */}
+        <meta name="twitter:creator" content="@DevotedGuru" /> {/* Replace with your Twitter handle */}
         <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.excerpt || "This is a blog post."} />
+        <meta name="twitter:description" content={post.excerpt || "This is a blog post about how to improve your life."} />
         <meta name="twitter:image" content={post.image} />
         <meta name="twitter:image:alt" content={`Image for ${post.title}`} />
       </Head>
