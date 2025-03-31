@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 export default {
   images: {
-    domains: ['localhost'], // Allow images from localhost
+    domains: ['devotedguru.com'], // Allow images from localhost
   },
 };
