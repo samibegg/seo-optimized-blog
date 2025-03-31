@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>SEO Optimized Blog</title>
+        <title>The Devoted Guru - Improve Your Life</title>
       </head>
       <body>
         <Header />  {/* Using the Header component */}
