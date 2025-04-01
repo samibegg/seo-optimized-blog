@@ -72,6 +72,7 @@ const BlogPost = async ({ params }) => {
             width={600}
             height={400}
           />
+          <div> {post.afflink && ( <a href={post.afflink} target="_blank" rel="noopener noreferrer"> {post.afflink_text} </a> )} </div>
           {post.content.map((section, index) => (
             <div key={index}>
               <h2>{section.section_title}</h2>
@@ -85,6 +86,7 @@ const BlogPost = async ({ params }) => {
               )}
             </div>
           ))}
+          <div> {post.afflink && ( <a href={post.afflink} target="_blank" rel="noopener noreferrer"> {post.afflink_text} </a> )} </div>
         </main>
 
         {/* Right Sidebar */}
